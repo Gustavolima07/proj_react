@@ -1,11 +1,11 @@
 import './App.css'
 
-import  { Cabecalho  }   from './components';
+import  { NavBar  }   from './components';
 
 const App = () => {
   return (
     <>
-      <Cabecalho />
+      <NavBar />
     </>
   )
 }
