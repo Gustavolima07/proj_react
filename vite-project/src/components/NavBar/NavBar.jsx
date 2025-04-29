@@ -23,9 +23,11 @@ const NavBar = () => {
                             </NavLink>
                                 </li>
                             
-                                <li class="nav-item">
-                                <a class="nav-link">Forum</a>
-                                </li>
+                            <li class="nav-item">
+                                <NavLink to="/Forum" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+                                    Forum        
+                                </NavLink>
+                            </li>
                                 
                                 <li class="nav-item">
                                 <a class="nav-link">Sobre nós</a>
