@@ -15,3 +15,7 @@ body{
     background-color: var(--cinza);
 }
 
+body, input, textarea, button{
+    font-size: 1rem;
+    font-family: sans-serif;
+}

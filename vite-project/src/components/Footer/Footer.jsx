@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
-    <footer className="bg-dark text-light py-4" style={{ position: "absolute", bottom: 0,left: 0, width: "100%" }}>
-        <div className="container px-4">
+    <footer className="bg-dark text-light py-4" style={{ position: "",bottom: 0,left: 0, width: "100%" }}>
+        <div className="container-fluid px-4">
           <div className="row">
             <div className="col-6 col-lg-4">
               <h3 className="pt-3 fw-bold">TeachSphere</h3>
@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
         </div>
         <hr />
-        <div className="d-flex justify-content-between container">
+        <div className="d-flex justify-content-between container-fluid">
           <p>2025 © TechSphere. All Rights Reserved.</p>
           <div className="d-flex">
             <a className="text-decoration-none text-light me-4" href="">Termos de uso</a>

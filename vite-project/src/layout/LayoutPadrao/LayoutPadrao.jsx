@@ -1,14 +1,21 @@
 import { Outlet } from "react-router-dom";
-import { NavBar, Footer } from "../../components";
+
+import { NavBar, Footer, Conteudo } from "../../components";
 
 const LayoutPadrao = () => {
     return (
         <>
-        <div className="d-flex flex-column min-vh-100">
+        <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
             <NavBar />
-                <Outlet />
+            
+            <main style={{ flex: 1 }}>
+                <Conteudo>
+                    <Outlet />
+                </Conteudo>
+            </main>
+
+            <Footer />  
         </div>
-            <Footer />
         </>
     
     );
