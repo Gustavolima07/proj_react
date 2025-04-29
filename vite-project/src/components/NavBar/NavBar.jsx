@@ -1,32 +1,43 @@
+import { NavLink } from 'react-router-dom';
+
 import style from './NavBar.module.css';
 
 const NavBar = () => {
     return (
-        <nav className={`navbar navbar-expand-lg fixed-top ${style.NavBar}`}>
-            <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-                    data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarText">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="#">Forum</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="#">Sobre nós</a>
-                            </li>
-                        </ul>
-                        <span class="navbar-text">
-                            Navbar text with an inline element
-                        </span>
-                    </div>
-            </div>
-        </nav>
+        <div>    
+            <nav className={`navbar navbar-expand-lg  navbar-dark bg-dark fixed-top ${style.NavBar}`}>
+                <div class="container-fluid">
+                        <NavLink to="/" className="navbar-brand">
+                        <a class="navbar-brand" className={style.Logo} >Navbar</a>
+                        </NavLink>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                    
+                        <div class="collapse navbar-collapse" id="navbarText">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li className="nav-item">
+                            <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+                                Home
+                            </NavLink>
+                                </li>
+                            
+                                <li class="nav-item">
+                                <a class="nav-link">Forum</a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                <a class="nav-link">Sobre nós</a>
+                                </li>
+                            </ul>
+                            <span class="navbar-text">
+                                Apenas um texto de NavBar
+                            </span>
+                        </div>
+                </div>
+            </nav>
+        </div>    
     );
 };
 

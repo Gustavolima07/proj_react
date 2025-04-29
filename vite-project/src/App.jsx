@@ -1,12 +1,15 @@
-import './App.css'
+import { BrowserRouter } from "react-router-dom";
+import { Router } from "./Router";
 
-import  { NavBar  }   from './components';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import './App.css'
 
 const App = () => {
   return (
-    <>
-      <NavBar />
-    </>
+        <BrowserRouter>
+          <Router />
+        </BrowserRouter>
   )
 }
 
