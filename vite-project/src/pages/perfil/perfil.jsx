@@ -1,4 +1,4 @@
-const perfil = () => {
+const Perfil = () => {
     return (
         <div className="container">
             <div className="row">
@@ -11,4 +11,4 @@ const perfil = () => {
     );
 }
 
-export { perfil };
+export { Perfil };
