@@ -32,6 +32,12 @@ const NavBar = () => {
                             <li class="nav-item">
                             <a class="nav-link">Sobre nós</a>
                             </li>
+
+                            <li className="nav-item">
+                            <NavLink to="/Perfil" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+                                Perfil
+                            </NavLink>
+                                </li>
             
                             <div class="form-group has-search d-flex mx-5 px-3" style={{alignItems: "center"}}>
                                 <span class="fa fa-search form-control-feedback"></span>
