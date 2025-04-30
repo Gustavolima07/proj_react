@@ -1,4 +1,4 @@
-import React from 'react'
+import style from './Login.module.css';
 
 const Login = () => {
   return (
@@ -9,12 +9,18 @@ const Login = () => {
                   <form className="bg-dark p-4 rounded-3 shadow-lg">
                     <h3 className='text-light'>Login</h3>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-labe text-light">Email address</label>
-                        <input type="email" class="form-control bg-" id="exampleInputEmail1" placeholder='Digite o seu E-mail' aria-describedby="emailHelp"/> <i class="bi bi-person-fill text-light"></i>
+                          <label for="exampleInputEmail1" class="form-labe text-light">Email address</label>
+                        <div className={style.Email}>
+                          <input type="email" class="form-control" id="exampleInputEmail1" placeholder='Digite o seu E-mail' aria-describedby="emailHelp" />
+                          <i class="d-flex align-items-center bi bi-person-fill text-light"></i>
+                        </div>
                     </div>
                     <div class="mb-3">
+        
                         <label for="exampleInputPassword1" class="form-label text-light">Password</label> 
-                        <input type="password" class="form-control" placeholder='Digite a sua senha' id="exampleInputPassword1" /><i class="bi bi-key-fill text-light"></i>
+                          <input type="password" class="form-control" placeholder='Digite a sua senha' id="exampleInputPassword1" />
+                          <i class="bi bi-key-fill text-light"></i>
+                      
                     </div>
                     <div class="mb-3 form-check d-inline-flex text-light"> 
                         <input type="checkbox" class="form-check-input me-1" id="exampleCheck1" />
