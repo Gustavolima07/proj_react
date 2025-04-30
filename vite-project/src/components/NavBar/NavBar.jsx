@@ -29,14 +29,24 @@ const NavBar = () => {
                                 </NavLink>
                             </li>
                                 
-                                <li class="nav-item">
-                                <a class="nav-link">Sobre nós</a>
-                                </li>
+                            <li class="nav-item">
+                            <a class="nav-link">Sobre nós</a>
+                            </li>
+            
+                            <div class="form-group has-search d-flex mx-5 px-3" style={{alignItems: "center"}}>
+                                <span class="fa fa-search form-control-feedback"></span>
+                                <input type="text" class="form-control" placeholder="Search" />
+                                <a className="text-decoration-none text-light fs-2 mx-3 me-5" href="#"><i class="bi bi-search"></i></a>
+                            </div>
+
                             </ul>
-                            <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                            </form>
+
+                        <div className="d-flex">
+                                <NavLink to="/Login">
+                                <a className="text-decoration-none text-light fs-2 me-3" href="#"><i class="bi bi-person-circle"></i></a>
+                                </NavLink>
+                            </div>
+
                         </div>
                 </div>
             </nav>

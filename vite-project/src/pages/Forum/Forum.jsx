@@ -1,6 +1,6 @@
 const Forum = () => {
     return (
-        <div className="container">
+        <div className="container mt-3">
             <div className="row">
                 <div className="col-11 col-md-6 offset-md-3 text-center mt-5 mb-5">
                     <h1>Bem-vindo à nossa página de Forum!</h1>
