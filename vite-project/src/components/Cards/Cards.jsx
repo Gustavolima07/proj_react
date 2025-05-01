@@ -2,16 +2,15 @@ import React from 'react';
 import "./Cards.css";
 
 function Cards({ title, imageUrl }) {
-    return (
-      <div className="card">
-        <img src={imageUrl} alt={title} />
-        <div className="col-md-4">
-        <img src="" className="img-fluid rounded-start" alt="teste" />
-        </div>
-        <h2>Teste</h2>
+  return (
+    <div className="card">
+      <img src={imageUrl} alt={title} />
+      <div className="card-body">
+        <h2>{title}</h2>
         <p>postagem</p>
       </div>
-    );
-  }
-  
-  export { Cards };    
+    </div>
+  );
+}
+
+export { Cards };

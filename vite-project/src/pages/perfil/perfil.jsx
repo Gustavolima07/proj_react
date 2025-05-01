@@ -3,7 +3,7 @@ import { Cards } from '../../components/Cards';
 import { Profile } from '../../components/Profile';
 
 const Perfil = () => {
-  console.log('Componente Perfil carregado'); 
+  console.log('Componente Perfil carregado');
 
   return (
     <div className="container mt-3">
@@ -19,8 +19,17 @@ const Perfil = () => {
         </div>
       </div>
       <div className="row">
-        <div className="col-12">
-          <Cards title="Exemplo de Título do Card" imageUrl="https://via.placeholder.com/300" />
+        <div className="col-12 col-md-6 mb-4">
+          <Cards title="Card 1" imageUrl="https://via.placeholder.com/300/FF0000" />
+        </div>
+        <div className="col-12 col-md-6 mb-4">
+          <Cards title="Card 2" imageUrl="https://via.placeholder.com/300/00FF00" />
+        </div>
+        <div className="col-12 col-md-6 mb-4">
+          <Cards title="Card 3" imageUrl="https://via.placeholder.com/300/0000FF" />
+        </div>
+        <div className="col-12 col-md-6 mb-4">
+          <Cards title="Card 4" imageUrl="https://via.placeholder.com/300/FFFF00" />
         </div>
       </div>
     </div>
