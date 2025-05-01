@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 
-import { Inicial, Erro, Forum, Perfil, Termos, Login } from "./pages" 
+import { Inicial, Erro, Forum, Perfil, Termos, Login, Registro } from "./pages" 
 import { LayoutPadrao } from "./layout";
 
 const Router = () => {
@@ -12,6 +12,7 @@ const Router = () => {
                 <Route path="/Perfil" element={<Perfil />} />
                 <Route path="/Termos" element={<Termos />} />
                 <Route path="/Login" element={<Login />} />
+                <Route path="/Registro" element={<Registro />} />
                 <Route path="*" element={<Erro />} />
             </Route>
         </Routes>

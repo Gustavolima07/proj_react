@@ -1,5 +1,8 @@
+import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import style from './Login.module.css';
+
+import { Botao } from '../../components';
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -13,14 +16,7 @@ const Login = () => {
     console.log("Enviando os seguintes dados: " + username + " - " + password);
   };
 
-  const handleLogin = (event) => {
-    event.preventDefault();
-    if (username === Email1 && password === Password1) {
-      alert("Login bem-sucedido!");
-    } else {
-      alert("Usuário ou senha incorretos.");
-    }
-  };
+
   return (
 
 
@@ -53,8 +49,8 @@ const Login = () => {
                       <br />
                       <a href="#" className="text-decoration-none">Esqueci minha senha</a>
                       <hr className='text-light' />
-                      <button onClick={handleLogin} type="submit" class="btn btn-primary">Entrar</button>
-                      <p className='text-light'>Não tem conta? <a href="#" className="text-decoration-none">Registre-se</a></p>
+                      <Botao texto="Entrar" tipo="login" onClick={handleSubmit}/>  
+                        <p className='text-light'>Não tem conta? <NavLink to="/Registro" className="text-decoration-none">Registre-se</NavLink></p>
                 </form>
               </div>
           </div>

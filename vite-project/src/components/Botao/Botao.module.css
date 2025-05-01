@@ -1,0 +1,50 @@
+.Botao{
+    background-color:green;
+    border : 1px solid #000;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.Botao[tipo="login"]{
+    background-color: #1E90FF;
+    color: #fff;
+}
+
+.Botao[tipo="login"]:hover{
+    background-color: #003162;
+    color: #fff;
+}
+
+.Botao[tipo="sucesso"]{
+    background-color:#28A745;
+    color: #fff;
+}
+
+.Botao[tipo="sucesso"]:hover{
+    background-color: #218838;
+
+}
+
+.Botao[tipo="atencao"]{
+    background-color:#DC3545;
+    color: #fff;
+}
+
+.Botao[tipo="atencao"]:hover{
+    background-color: #C82333;
+
+}
+
+.Botao[tipo="voltar"]{
+    background-color:#2d3033;
+    color: #ffffff;
+}
+
+.Botao[tipo="voltar"]:hover{
+    background-color: #403f3f;
+    color: #fff;
+
+}
