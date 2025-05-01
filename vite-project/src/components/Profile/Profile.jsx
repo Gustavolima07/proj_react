@@ -7,7 +7,7 @@ function Profile() {
     email: 'joao@email.com',
     bio: 'Desenvolvedor apaixonado por tecnologia e café.',
     avatar: '...',
-    isProfessional: false, // Adicionando o estado para conta profissional
+    isProfessional: false,
   });
 
   const [isEditing, setIsEditing] = useState(false);
@@ -41,7 +41,7 @@ function Profile() {
               checked={form.isProfessional}
               onChange={handleCheckboxChange}
             />
-            Conta profissional
+            Conta para Empresas
           </label>
           <button onClick={handleSave}>Salvar</button>
         </>
@@ -50,7 +50,7 @@ function Profile() {
           <h2>{user.name}</h2>
           <p>{user.email}</p>
           <p>{user.bio}</p>
-          {user.isProfessional && <span className="professional-badge">Conta Profissional</span>}
+          {user.isProfessional && <span className="professional-badge">Empresa</span>}
           <button onClick={() => setIsEditing(true)}>Editar Perfil</button>
         </>
       )}
