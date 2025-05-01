@@ -1,40 +1,72 @@
 .card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 300px; /* Defina a largura desejada */
-  }
-  
-  .card-image {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .card-body {
-    padding: 16px;
-  }
-  
-  .card-title {
-    font-size: 1.2em;
-    margin-bottom: 8px;
-  }
-  
-  .card-text {
-    color: #555;
-    margin-bottom: 12px;
-  }
-  
-  .card-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .card-button:hover {
-    background-color: #0056b3;
-  }
+  border: 1px solid #000080;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.card-text {
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.card-edit-input {
+  width: calc(100% - 12px);
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.card-edit-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.card-edit-textarea {
+  width: calc(100% - 12px);
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 60px;
+}
+
+.card-edit-textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.card-edit-button {
+  background-color: #000080;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  margin-right: 8px;
+}
+
+.card-edit-button:hover {
+  background-color: #002246;
+}
