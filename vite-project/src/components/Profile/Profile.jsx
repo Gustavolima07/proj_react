@@ -12,6 +12,7 @@ function Profile() {
 
   const [isEditing, setIsEditing] = useState(false);
   const [form, setForm] = useState(user);
+  const [newAvatar, setNewAvatar] = useState(null);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -22,15 +23,27 @@ function Profile() {
   };
 
   const handleSave = () => {
-    setUser(form);
+    setUser({ ...form, avatar: newAvatar || form.avatar });
     setIsEditing(false);
+  };
+
+  const handleAvatarChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setNewAvatar(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
   };
 
   return (
     <div className="profile-container">
-      <img src={user.avatar} alt="Avatar" className="profile-avatar" />
+      <img src={newAvatar || user.avatar} alt="Avatar" className="profile-avatar" />
       {isEditing ? (
         <>
+          <input type="file" accept="image/*" onChange={handleAvatarChange} />
           <input name="name" value={form.name} onChange={handleChange} />
           <input name="email" value={form.email} onChange={handleChange} />
           <textarea name="bio" value={form.bio} onChange={handleChange} />
