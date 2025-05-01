@@ -1,0 +1,12 @@
+.SlideBar {
+    width: 250px;
+    position: fixed;
+    background-color: #0b0b17;
+    color: white;
+    left: 0;
+    padding-top: 10px;
+    min-height: 100%;
+    overflow-y:visible;
+  }
+
+  
