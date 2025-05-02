@@ -30,7 +30,9 @@ const NavBar = () => {
                             </li>
                                 
                             <li class="nav-item">
-                            <a class="nav-link">Sobre nós</a>
+                            <NavLink to="/Sobre_nós" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+                                    Sobre nós        
+                                </NavLink>
                             </li>
 
                             <li className="nav-item">
