@@ -8,7 +8,7 @@ const NavBar = () => {
             <nav className={`navbar navbar-expand-lg  navbar-dark bg-dark fixed-top ${style.NavBar}`}>
                 <div class="container-fluid">
                         <NavLink to="/" className="navbar-brand">
-                        <a class="navbar-brand" className={style.Logo} >TechSphere <i class="bi bi-chat-dots"></i></a>
+                            <span className="text-light">TechSphere <i class="bi bi-chat-dots"></i></span>
                         </NavLink>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
                         data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,7 +49,7 @@ const NavBar = () => {
 
                         <div className="d-flex">
                                 <NavLink to="/Login">
-                                <a className="text-decoration-none text-light fs-2 me-3" href="#"><i class="bi bi-person-circle"></i></a>
+                                    <span className="text-decoration-none text-light fs-2 me-3"><i class="bi bi-person-circle"></i></span>
                                 </NavLink>
                             </div>
 

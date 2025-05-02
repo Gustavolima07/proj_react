@@ -4,9 +4,9 @@ import { api } from '../services/api';
 export const AppContext = createContext({});
 
 export const AppContextProvider = (props) => {
-	const { children } = props;
+    const { children } = props;
 
-	const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState([]);
 
     const [loadingCarregar, setLoandingCarregar] = useState(false);
     const [loadingCriar, setLoandingCriar] = useState(false);
@@ -16,7 +16,7 @@ export const AppContextProvider = (props) => {
     const carregarPosts = async () => {
         setLoandingCarregar(true)
 
-        const { data = [ ]} = await api.get('/Posts');
+        const { data = [ ]} = await api.get('/posts');
 
         setPosts([
             ...data,
@@ -26,43 +26,40 @@ export const AppContextProvider = (props) => {
 
     const adicionarPost = async (nomePost) => {
         setLoandingCriar(true);
-        const { data: Post } = await api.post('/Posts', {
+        const { data: post } = await api.post('/posts', {
             nome: nomePost, 
         });
         
         setPosts(estadoAtual => {
-            return [...estadoAtual, Post];
+            return [...estadoAtual, post];
         });
         setLoandingCriar(false);
     };
 
     const removerPost = async (idPost) => {
-        setLoandingDeletar(idPost);
-
-        await api.delete(`Posts/${idPost}`);
-
-        setPosts(estadoAtual => {
-            const PostsAtualizadas = estadoAtual.filter(Post => Post.id != idPost);
-
-            return [
-                ...PostsAtualizadas
-            ];
-        });
-        setLoandingDeletar(null);
+        try {
+            setLoandingDeletar(idPost);
+            await api.delete(`/posts/${idPost}`);
+            setPosts(estadoAtual => estadoAtual.filter(post => post.id != idPost));
+        } catch (erro) {
+            console.error("Erro ao deletar post:", erro);
+        } finally {
+            setLoandingDeletar(null);
+        }
     };
-
+    
     const editarPost = async (idPost, nomePost) => {
         setLoandingEditar(idPost);
 
-        const { data: PostsAtualizada } = await api.put(`Posts/${idPost}`, {
+        const { data: postAtualizado } = await api.put(`posts/${idPost}`, {
             nome: nomePost,
         });
 
         setPosts(estadoAtual => {
-            const PostsAtualizadas = estadoAtual.map(Post => 
-                Post.id === idPost ? { ...Post, nome: PostsAtualizada.nome } : Post
+            const postsAtualizados = estadoAtual.map(post => 
+                post.id === idPost ? { ...post, nome: postAtualizado.nome } : post
             );
-            return [...PostsAtualizadas];
+            return [...postsAtualizados];
         });
         setLoandingEditar(null);
     };
@@ -85,6 +82,4 @@ export const AppContextProvider = (props) => {
             {children}
         </AppContext.Provider>
     )
-
 }
-

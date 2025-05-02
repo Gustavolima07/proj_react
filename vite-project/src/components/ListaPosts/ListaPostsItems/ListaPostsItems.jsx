@@ -1,5 +1,4 @@
 import { Botao, CampoTexto, Loading } from "../../../components";
-
 import { useState } from "react";
 import { useAppContext } from "../../../hooks/";
 
@@ -22,7 +21,7 @@ const ListaPostsItems = (props) => {
     const loadingEstaDeletando = loadingDeletar == id;
 
     return (
-        <li className="ListaPostsItems">
+        <li className="d-flex justify-content-center align-items-center gap-3 fs-5">
             {(loadingEstaEditando || estaEditando) && (
                 <CampoTexto defaultValue={nome} onBlur={onBlurPost} autoFocus />
             )}
@@ -32,7 +31,7 @@ const ListaPostsItems = (props) => {
 
             {loadingEstaEditando && <Loading />}
 
-            <Botao texto={loadingEstaDeletando ? <Loading /> : '-'} tipo="sucesso"
+            <Botao texto={loadingEstaDeletando ? <Loading /> : 'X'} tipo="atencao"
             onClick = {() => removerPost(id)}
             />
         </li>
