@@ -63,8 +63,16 @@ function Profile() {
           <h2>{user.name}</h2>
           <p>{user.email}</p>
           <p>{user.bio}</p>
-          {user.isProfessional && <span className={`professional-badge ${user.isProfessional ? 'fundo-roxo' : ''}`}>Empresa</span>}
-          <button onClick={() => setIsEditing(true)}>Editar Perfil</button>
+          <div className="header-actions">
+          {user.isProfessional && (
+          <span className={`professional-badge ${user.isProfessional ? 'fundo-azul' : ''}`}>
+          Empresa
+          </span>
+          )}
+          <button className="edit-button" onClick={() => setIsEditing(true)}>
+          Editar Perfil
+          </button>
+          </div>
         </>
       )}
     </div>

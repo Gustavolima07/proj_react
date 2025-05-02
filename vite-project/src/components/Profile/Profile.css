@@ -2,25 +2,8 @@
   --preto: #000000;
   --branco: #ffffff;
   --cinza: #808080;
-  --azul: #0000ff;
+  --azul: #000080;
   --roxo-escuro: #48007e;
-}
-
-.profile-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.profile-avatar {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
 }
 
 body {
@@ -29,6 +12,32 @@ body {
   font-family: sans-serif;
   color: var(--branco);
   text-decoration: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 2rem;
+  padding: 2rem;
+  background-color: var(--roxo-escuro);
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 input, textarea {
@@ -43,24 +52,86 @@ input, textarea {
 }
 
 button {
-  background-color: var(--roxo-escuro);
-  color: var(--branco);
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
+  background-color: #000080; 
+  color: var(--branco); 
+  border: none; 
+  padding: 10px 20px; 
+  cursor: pointer; 
+  border-radius: 10px;
+  display: inline-block; 
+  text-align: center; 
+  font-size: 1rem; 
 }
 
-.profile-avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+.edit-button {
+  border-radius: 10px !important;
+  padding: 10px 20px;
+  background-color: #000080;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+  background-color: #36005d;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
 }
 
 .professional-badge {
-  background-color: var(--roxo-escuro);
+  background-color: var(--azul);
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 0.8em;
   margin-left: 10px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card {
+  background-color: var(--cinza);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 250px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: var(--preto);
+}
+
+.fundo-azul {
+  background-color: navy;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* ou 'flex-end' para grudar à direita */
+  width: 100%;
+  gap: 1rem; /* espaço entre badge e botão */
 }
