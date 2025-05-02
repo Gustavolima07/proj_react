@@ -50,7 +50,6 @@ function Form({ onArquivoEnviado }) {
 
   return (
     <form onSubmit={handleSubmit} className="formulario-arquivo">
-      <label htmlFor="arquivo">Selecione um arquivo:</label>
       <input
         type="file"
         id="arquivo"
@@ -59,7 +58,6 @@ function Form({ onArquivoEnviado }) {
         required
       />
 
-      <label htmlFor="mensagem">Mensagem opcional:</label>
       <textarea
         id="mensagem"
         name="mensagem"

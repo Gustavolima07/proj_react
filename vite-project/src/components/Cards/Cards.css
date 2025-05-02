@@ -1,5 +1,5 @@
 .card {
-  background-color: var(--cinza);
+  background-color: #48007e !important; 
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -10,6 +10,7 @@
   align-items: flex-start;
   transition: transform 0.3s ease;
 }
+
 
 .card:hover {
   transform: scale(1.05);
@@ -24,12 +25,12 @@
 .card-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--preto);
+  color: #ffffff !important; 
 }
 
 .card-text {
   font-size: 1rem;
-  color: var(--preto);
+  color: var(--branco);
 }
 
 .card-edit-button {
@@ -42,8 +43,8 @@
   transition: background-color 0.3s;
 }
 
-.card-edit-button:hover {
-  background-color: #48007e;
+.card-edit-button {
+  background-color: #000080;
 }
 
 .card-edit-input,

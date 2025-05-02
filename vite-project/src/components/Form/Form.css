@@ -5,7 +5,7 @@
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #48007e;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
@@ -31,7 +31,7 @@
   }
   
   .formulario-arquivo button[type="submit"] {
-    background-color: #48007e;
+    background-color: #000080;
     color: white;
     padding: 12px 20px;
     border: none;
