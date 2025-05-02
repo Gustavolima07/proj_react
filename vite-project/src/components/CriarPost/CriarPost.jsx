@@ -21,7 +21,7 @@ const CriarPost = () => {
         }
 
         adicionarPost(nomePost);
-        setNomePost('q');
+        setNomePost('');
     }
 
 
