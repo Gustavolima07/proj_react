@@ -4,19 +4,19 @@ const Sobre_nós = () => {
             <div className="row">
                 <div className="col-11 col-md-6 offset-md-3 text-center mt-5 mb-5">
                     <br />
-                    <h1>Sobre Nós</h1>
+                    <h1 style={{ color: "#9b59b6" }}>Sobre Nós</h1>
                     <br />
                     <h5>Oque nós somos, quais as nossas funcionalidades e vantagens? </h5>
                     <hr />
                     <br />
-                    <h1>Oque nós somos?</h1>
+                    <h1 style={{ color: "#9b59b6" }}>Oque nós somos?</h1>
                     <br />
                     <p>O TechSphere é uma plataforma digital voltada para a comunidade de desenvolvedores, programadores e empresas do setor de tecnologia. Seu objetivo principal é facilitar a troca de conhecimentos, a colaboração em projetos de programação e a conexão entre profissionais e empresas interessadas em contratar, negociar ou colaborar em projetos de desenvolvimento de software.</p>
                     <br />
                     <hr />
-                    <h1>Funcionalidades</h1>
+                    <h1 style={{ color: "#9b59b6" }}>Funcionalidades</h1>
                     <br />
-                    <h3>1. Cadastro e Perfil de Usuário</h3>
+                    <h3 style={{ color: "#9b59b6" }}>1. Cadastro e Perfil de Usuário</h3>
                     <br />
                     <p>- Os usuários podem realizar um cadastro na plataforma, criando um perfil personalizado.
                     <br /><br />
@@ -24,13 +24,13 @@ const Sobre_nós = () => {
                     <br /><br />
                     - Os usuários também podem publicar arquivos de código, permitindo compartilhar soluções, trechos de código ou projetos completos com a comunidade.</p>
                     <br /><br />
-                    <h3>2. Compartilhamento e Acesso a Códigos</h3>
+                    <h3 style={{ color: "#9b59b6" }}>2. Compartilhamento e Acesso a Códigos</h3>
                     <br /> 
                     <p>- A plataforma permite que os usuários publiquem seus códigos de forma acessível a outros membros.
                     <br /><br />
                     - Os demais usuários podem visualizar, baixar, caso a opção tenha sido habilitada por quem publicou, e comentar nos códigos publicados, promovendo a troca de conhecimentos e a colaboração.</p>
                     <br /><br />
-                    <h3>3. Perfil de Empresa</h3>
+                    <h3 style={{ color: "#9b59b6" }}>3. Perfil de Empresa</h3>
                     <br />
                     <p>-Empresas podem criar perfis específicos na plataforma, marcados como "perfil de empresa".</p>
                     <br />
@@ -39,7 +39,7 @@ const Sobre_nós = () => {
                     <p>- Empresas podem utilizar esses perfis para buscar profissionais, divulgar oportunidades e estabelecer negociações.</p>
                     <br /><br />
                     <hr />
-                    <h1>Vantagens</h1>
+                    <h1 style={{ color: "#9b59b6" }}>Vantagens</h1>
                     <br />
                     <p>- Comunidade colaborativa: Incentiva o compartilhamento de conhecimento e a troca de experiências.</p>
                     <br /><br />
