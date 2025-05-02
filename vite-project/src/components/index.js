@@ -4,4 +4,9 @@ export * from "./Conteudo";
 export * from "./Botao";
 export	* from "./SlideBar";
 export	* from "./Profile";
-export	* from "./Form";
+export * from "./Form";
+export * from "./Cards";
+export * from "./ListaPosts";
+export * from "./CriarPost";
+export * from "./CampoTexto"
+export * from "./Loading";
