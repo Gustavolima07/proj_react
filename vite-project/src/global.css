@@ -3,20 +3,22 @@
     --branco : #ffffff;
     --cinza : #808080;
     --azul : #0000ff;
-}
-
-* {
+    }
+    
+    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-
-body{
-    background-color: var(--cinza);
-}
-
-body, input, textarea, button{
+    }
+    
+    
+    body{
+    background-color:#000080;
+    }
+    
+    body, input, textarea, button{
     font-size: 1rem;
     font-family: sans-serif;
-}
+    color: var(--branco);
+    text-decoration: none; 
+    }
