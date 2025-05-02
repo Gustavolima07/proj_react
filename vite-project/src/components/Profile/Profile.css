@@ -77,6 +77,16 @@ button {
   background-color: #36005d;
 }
 
+.save-button {
+  border-radius: 10px !important;
+  padding: 10px 20px;
+  background-color: #000080;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
 .button-container {
   display: flex;
   justify-content: center; 

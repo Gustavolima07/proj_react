@@ -1,13 +1,11 @@
 footer {
-    background-color: #48007e !important; 
-    color: #f8f9fa; 
-    padding-top: 40px;
-    padding-bottom: 40px;
-    position: relative;
+    background-color: #48007e;
+    position: sticky;
     bottom: 0;
     left: 0;
     width: 100%;
-}
+    z-index: 1;
+  }
 
 footer .container-fluid {
     padding-left: 0;

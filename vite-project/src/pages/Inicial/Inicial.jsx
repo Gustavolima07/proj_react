@@ -10,8 +10,6 @@ const Inicial = () => {
                     <h1>Página Inicial</h1>
                     <CriarPost />
                     <ListaPosts />
- 
-            
                 </div>
             </div>
         </div>

@@ -1,10 +1,9 @@
 import { NavLink } from "react-router-dom";
-
 import './Footer.module.css';
 
 const Footer = () => {
   return (
-    <footer className="footer bg-dark text-light py-4" style={{ position: "relative", bottom: 0, left: 0, width: "100%" }}>
+    <footer style={{ position: "relative", bottom: 0, left: 0, width: "100%", zIndex: 2 }}>
       <div className="container-fluid px-4">
         <div className="row">
           <div className="col-6 col-lg-4">
@@ -26,11 +25,11 @@ const Footer = () => {
               <NavLink to="/Forum" className="text-decoration-none text-light">
                 <li>Fórum</li>
               </NavLink>
-              <NavLink to="/Sobre_nós" className="text-decoration-none text-light"> 
-                  <li>Sobre nós</li>
+              <NavLink to="/Sobre_nós" className="text-decoration-none text-light">
+                <li>Sobre nós</li>
               </NavLink>
-              <NavLink to="/Perfil" className="text-decoration-none text-light"> 
-                  <li>Perfil</li>
+              <NavLink to="/Perfil" className="text-decoration-none text-light">
+                <li>Perfil</li>
               </NavLink>
             </ul>
           </div>

@@ -5,7 +5,7 @@ import style from './NavBar.module.css';
 const NavBar = () => {
     return (
         <div>    
-            <nav className={`navbar navbar-expand-lg  navbar-dark bg-dark fixed-top ${style.NavBar}`}>
+            <nav className={`navbar navbar-expand-lg fixed-top ${style.NavBar}`}>
                 <div class="container-fluid">
                         <NavLink to="/" className="navbar-brand">
                             <span className="text-light">TechSphere <i class="bi bi-chat-dots"></i></span>

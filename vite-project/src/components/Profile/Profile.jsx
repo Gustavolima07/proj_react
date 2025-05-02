@@ -56,7 +56,10 @@ function Profile() {
             />
             Conta para Empresas
           </label>
-          <button onClick={handleSave}>Salvar</button>
+          <button style={{ borderRadius: '10px' }} onClick={handleSave}>
+          Salvar
+          </button>
+
         </>
       ) : (
         <>

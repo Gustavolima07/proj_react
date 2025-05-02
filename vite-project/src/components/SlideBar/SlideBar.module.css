@@ -1,12 +1,66 @@
 .SlideBar {
-    width: 250px;
-    position: fixed;
-    background-color: #0b0b17;
-    color: white;
-    left: 0;
-    padding-top: 10px;
-    min-height: 100%;
-    overflow-y:visible;
-  }
+  background-color: #48007e; 
+  border-right: 1px solid #e0e0e0; 
+  height: 100vh; 
+  width: 250px;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  overflow-y: auto; 
+  z-index: 2; 
+}
+
+.SlideBar .nav-link {
+  padding: 0.75rem 1.25rem;
+  color: #333; 
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.SlideBar .nav-link:hover {
+  background-color: #e9ecef; 
+}
+
+.SlideBar .nav-link.active {
+  background-color: #007bff; 
+  color: white;
+}
+
+.SlideBar .nav-link .icon {
+  margin-right: 0.75rem;
+  font-size: 1.2em;
+}
+
+.SlideBar .nav-link .description {
+  flex-grow: 1; 
+}
+
+.SlideBar hr {
+  border-top: 1px solid #e0e0e0;
+  margin: 1rem 0;
+}
+
+.SlideBar .sub-menu {
+  padding-left: 1.5rem;
+}
+
+.SlideBar .sub-menu .nav-link {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.95em;
+}
+
+.SlideBar .sub-menu .nav-link:hover {
+  background-color: #f0f0f0;
+}
+
+.SlideBar .nav-link[data-bs-toggle="collapse"] .description i {
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.SlideBar .nav-link[aria-expanded="true"] .description i {
+  transform: rotate(-180deg);
+}
 
   
