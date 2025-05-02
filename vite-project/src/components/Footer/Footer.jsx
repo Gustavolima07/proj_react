@@ -20,7 +20,7 @@ const Footer = () => {
             <h4 className="pt-3">Menu</h4>
             <ul className="list-unstyled">
               <NavLink to="/" className="text-decoration-none text-light">
-                <li>Home</li>
+                <li>Página Inicial</li>
               </NavLink>
               <NavLink to="/Forum" className="text-decoration-none text-light">
                 <li>Fórum</li>

@@ -19,7 +19,7 @@ const NavBar = () => {
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
                             <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
-                                Home
+                                Página Inicial
                             </NavLink>
                                 </li>
                             
