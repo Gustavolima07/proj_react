@@ -131,7 +131,7 @@ button {
 .header-actions {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* ou 'flex-end' para grudar à direita */
+  justify-content: space-between;
   width: 100%;
-  gap: 1rem; /* espaço entre badge e botão */
+  gap: 1rem;
 }

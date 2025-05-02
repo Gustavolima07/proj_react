@@ -14,9 +14,14 @@
   
   .formulario-arquivo label {
     display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .formulario-arquivo textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    resize: vertical;
   }
   
   .formulario-arquivo input[type="file"] {
@@ -26,7 +31,7 @@
   }
   
   .formulario-arquivo button[type="submit"] {
-    background-color: #007bff;
+    background-color: #48007e;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -37,5 +42,5 @@
   }
   
   .formulario-arquivo button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #48007e;
   }

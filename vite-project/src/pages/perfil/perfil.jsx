@@ -38,7 +38,7 @@ const Perfil = () => {
       <div className="row justify-content-center mb-5">
         <div className="col-12 col-md-8">
           <br />
-          <h2>Enviar um Arquivo</h2>
+          <h2>Criar Post</h2>
           <br />
           <Form onArquivoEnviado={handleArquivoEnviado} />
         </div>

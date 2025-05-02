@@ -3,9 +3,14 @@ import './Form.css';
 
 function Form({ onArquivoEnviado }) {
   const [arquivo, setArquivo] = useState(null);
+  const [mensagem, setMensagem] = useState('');
 
   const handleArquivoChange = (event) => {
     setArquivo(event.target.files[0]);
+  };
+
+  const handleMensagemChange = (event) => {
+    setMensagem(event.target.value);
   };
 
   const handleSubmit = async (event) => {
@@ -17,6 +22,7 @@ function Form({ onArquivoEnviado }) {
 
     const formData = new FormData();
     formData.append('arquivo', arquivo);
+    formData.append('mensagem', mensagem); 
 
     try {
       const response = await fetch('/upload', {
@@ -31,6 +37,7 @@ function Form({ onArquivoEnviado }) {
           onArquivoEnviado(data);
         }
         setArquivo(null);
+        setMensagem('');
       } else {
         const error = await response.text();
         alert(`Erro no envio: ${error}`);
@@ -51,6 +58,17 @@ function Form({ onArquivoEnviado }) {
         onChange={handleArquivoChange}
         required
       />
+
+      <label htmlFor="mensagem">Mensagem opcional:</label>
+      <textarea
+        id="mensagem"
+        name="mensagem"
+        value={mensagem}
+        onChange={handleMensagemChange}
+        rows="4"
+        placeholder="Digite uma mensagem opcional..."
+      />
+
       <button type="submit">Enviar Arquivo</button>
     </form>
   );
