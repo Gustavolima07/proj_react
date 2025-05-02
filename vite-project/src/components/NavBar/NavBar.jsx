@@ -25,7 +25,7 @@ const NavBar = () => {
                             
                             <li class="nav-item">
                                 <NavLink to="/Forum" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
-                                    Forum        
+                                    Fórum        
                                 </NavLink>
                             </li>
                                 

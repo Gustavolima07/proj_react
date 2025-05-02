@@ -13,7 +13,7 @@ const Perfil = () => {
     <div className="container mt-3">
       <div className="row">
         <div className="col-11 col-md-6 offset-md-3 text-center mt-5 mb-4">
-          <h1>Acompanhe seu Perfil!</h1>
+          <br />
         </div>
       </div>
       <div className="row justify-content-center mb-5">
@@ -37,7 +37,9 @@ const Perfil = () => {
       </div>
       <div className="row justify-content-center mb-5">
         <div className="col-12 col-md-8">
+          <br />
           <h2>Enviar um Arquivo</h2>
+          <br />
           <Form onArquivoEnviado={handleArquivoEnviado} />
         </div>
       </div>
