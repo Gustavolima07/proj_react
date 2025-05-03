@@ -5,8 +5,7 @@ import { Loading } from "../Loading/Loading";
 const ListaPosts = () => {
     const { posts, loading } = useAppContext();
     return (
-        <div>
-            <ul className="ListaPosts d-flex flex-column gap-3">
+            <div className="d-flex flex-column justify-content-center w-auto gap-4 p-3 shadow-sm">
                 {loading && (
                     <p>
                         Carregando...
@@ -19,10 +18,9 @@ const ListaPosts = () => {
                 )}
 
                 {posts.map((post) => (
-                    <ListaPostsItems key={post.id} id={post.id}  nome={post.nome} />
+                    <ListaPostsItems key={post.id} id={post.id} nome={post.nome} descricao={post.descricao} />
                 ))}
-            </ul>
-        </div>
+            </div>
     );
 }
 

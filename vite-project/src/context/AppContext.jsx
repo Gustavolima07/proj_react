@@ -24,10 +24,11 @@ export const AppContextProvider = (props) => {
         setLoandingCarregar(false)
     };  
 
-    const adicionarPost = async (nomePost) => {
+    const adicionarPost = async (nomePost, descricaoPost) => {
         setLoandingCriar(true);
         const { data: post } = await api.post('/posts', {
             nome: nomePost, 
+            descricao: descricaoPost
         });
         
         setPosts(estadoAtual => {
@@ -48,16 +49,17 @@ export const AppContextProvider = (props) => {
         }
     };
     
-    const editarPost = async (idPost, nomePost) => {
+    const editarPost = async (idPost, nomePost, descricaoPost) => {
         setLoandingEditar(idPost);
 
         const { data: postAtualizado } = await api.put(`posts/${idPost}`, {
             nome: nomePost,
+            descricao: descricaoPost
         });
 
         setPosts(estadoAtual => {
             const postsAtualizados = estadoAtual.map(post => 
-                post.id === idPost ? { ...post, nome: postAtualizado.nome } : post
+                post.id === idPost ? { ...post, nome: postAtualizado.nome, descricaoPoss: postAtualizado.descricao } : post
             );
             return [...postsAtualizados];
         });
