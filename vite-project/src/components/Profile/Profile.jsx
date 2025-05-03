@@ -4,7 +4,7 @@ import './Profile.css';
 function Profile() {
   const [user, setUser] = useState({
     name: 'Marcos Cavalcanti',
-    email: 'marcus@gmail.com',
+    email: 'marcos@gmail.com',
     bio: 'Desenvolvedor apaixonado por tecnologia e café.',
     avatar: 'https://images.vexels.com/media/users/3/147101/isolated/preview/b4a49d4b864c74bb73de63f080ad7930-botao-de-perfil-do-instagram.png',
     isProfessional: false,
