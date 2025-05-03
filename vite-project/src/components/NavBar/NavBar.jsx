@@ -10,9 +10,9 @@ const NavBar = () => {
                         <NavLink to="/" className="navbar-brand">
                             <span className="text-light">TechSphere <i class="bi bi-chat-dots"></i></span>
                         </NavLink>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                        <button class="navbar-toggler mx-4 border-secondary" type="button" data-bs-toggle="collapse" 
                         data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar "><i class="bi bi-list fs-3"></i></span>
                         </button>
                     
                         <div class="collapse navbar-collapse" id="navbarText">
@@ -41,7 +41,7 @@ const NavBar = () => {
                             </NavLink>
                                 </li>
             
-                            <div class="form-group has-search d-flex mx-5 px-3" style={{alignItems: "center"}}>
+                            <div class="form-group has-search d-flex justify-content-center" style={{alignItems: "center"}}>
                                 <span class="fa fa-search form-control-feedback"></span>
                                 <input type="text" class="form-control" placeholder="Search" />
                                 <a className="text-decoration-none text-light fs-2 mx-3 me-5" href="#"><i class="bi bi-search"></i></a>
@@ -49,7 +49,7 @@ const NavBar = () => {
 
                             </ul>
 
-                        <div className="d-flex">
+                        <div className="d-flex ">
                                 <NavLink to="/Login">
                                     <span className="text-decoration-none text-light fs-2 me-3"><i class="bi bi-person-circle"></i></span>
                                 </NavLink>

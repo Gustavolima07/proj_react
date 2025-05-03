@@ -48,9 +48,9 @@ const Footer = () => {
             <h4 className="pt-3">Nossas Redes Sociais</h4>
             <div>
               <a href="#" className="text-light fs-2 me-3"><i className="bi bi-facebook"></i></a>
-              <a href="#" className="text-light fs-2 me-3"><i className="bi bi-pinterest"></i></a>
+              <a href="#" className="text-light fs-2 me-3"><i className="bi bi-linkedin"></i></a>
               <a href="#" className="text-light fs-2 me-3"><i className="bi bi-instagram"></i></a>
-              <a href="#" className="text-light fs-2"><i className="bi bi-linkedin"></i></a>
+              <a href="#" className="text-light fs-2"><i className="bi bi-whatsapp"></i></a>
             </div>
           </div>
         </div>

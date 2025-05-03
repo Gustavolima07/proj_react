@@ -1,4 +1,4 @@
-.criar-post-container {
+.criar {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -7,7 +7,7 @@
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-    background-color: #48007e;
+    background-color: #424242;
   }
   
   .criar-post-icone {

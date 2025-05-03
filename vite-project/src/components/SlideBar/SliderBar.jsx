@@ -1,9 +1,19 @@
+import { useState } from "react";
 import styles from "../SlideBar/SlideBar.module.css";
 
 const SlideBar = () => {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    
     return (
         <aside style={{ fontSize: "1.2rem" }}>
-            <div className={styles.SlideBar}>
+            <button 
+                className={`${styles.mobileToggleButton} d-lg-none`}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+                <i className="bi bi-arrow-bar-right"></i>
+            </button>
+
+            <div className={`${styles.SlideBar} ${isMobileMenuOpen ? styles.mobileOpen : ''}`}>
                 <nav className="nav flex-column p-3">
                     <a href="#" className="nav-link">
                         <span className="icon"><i className="bi bi-house"></i></span>

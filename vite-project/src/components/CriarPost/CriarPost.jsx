@@ -29,7 +29,7 @@ const CriarPost = () => {
 
     return (
         <div className="d-inline-flex align-items-center justify-content-center gap-3 
-          rounded px-3 py-2 w-auto mb-3 shadow-sm">
+          rounded px-3 py-2 w-auto mb-3 shadow-sm bg-dark" >
             <i className="bi bi-person-circle text-light fs-4"></i>
              <form onSubmit={(submetForm)} className="d-inline-flex align-items-center gap-3">
                 <CampoTexto value={nomePost} onChange={(onChangeNomePost)}
