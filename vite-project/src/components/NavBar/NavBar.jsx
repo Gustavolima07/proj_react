@@ -66,7 +66,7 @@ const NavBar = () => {
                             </ul>
 
                         <div className="d-flex gap-3 align-items-center justify-content-center">
-                            <p name="navNome">getUsa{getUsarioLogado()}</p> 
+                            <p name="navNome">{getUsarioLogado()}</p> 
                                 <NavLink to="/Login">
                                      <span className="text-decoration-none text-light fs-2 me-3"><i class="bi bi-person-circle"></i></span>
                                 </NavLink>
