@@ -44,18 +44,6 @@ const NavBar = () => {
                                 </NavLink>
                             </li>
 
-                            <li className="nav-item">
-                             <NavLink  className={({ isActive }) => `nav-link ${isActive ? 'active' : 'text-light'}`} onClick={
-                                () => {
-                                    if(!isLogado())
-                                        window.location.href = "/Login";
-                                    else
-                                        window.location.href = "/Perfil";
-                                }
-                             } >
-                                    Perfil
-                             </NavLink>
-                             </li>
             
                             <div class="form-group has-search d-flex justify-content-center" style={{alignItems: "center"}}>
                                 <span class="fa fa-search form-control-feedback"></span>
@@ -67,7 +55,14 @@ const NavBar = () => {
 
                         <div className="d-flex gap-3 align-items-center justify-content-center">
                             <p name="navNome">{getUsarioLogado()}</p> 
-                                <NavLink to="/Login">
+                                <NavLink onClick={
+                                () => {
+                                    if(!isLogado())
+                                        window.location.href = "/Login";
+                                    else
+                                        window.location.href = "/Perfil";
+                                }
+                             } >
                                      <span className="text-decoration-none text-light fs-2 me-3"><i class="bi bi-person-circle"></i></span>
                                 </NavLink>
 
