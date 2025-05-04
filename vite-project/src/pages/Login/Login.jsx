@@ -1,61 +1,132 @@
-import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
-import style from './Login.module.css';
-
-import { Botao } from '../../components';
+import React, { useState } from 'react';
+import { Botao, CampoTexto } from '../../components';
+import axios from 'axios';
 
 const Login = () => {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [Email1] = useState("admin");
-  const [Password1] = useState("admin123");
+  const [nome, setNome] = useState("");
+  const [isCadastro, setIsCadastro] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    
-    console.log("Enviando os seguintes dados: " + username + " - " + password);
+
+    if (isCadastro) {
+      // Cadastro
+      try {
+        await axios.post("http://localhost:3333/contas/contas/contas", {
+          nome: nome,
+          email: email,
+          senha: password
+        });
+        alert("Conta criada com sucesso!");
+        setIsCadastro(false); // volta para modo login
+        setNome("");
+        setEmail("");
+        setPassword("");
+      } catch (error) {
+        alert("Erro ao cadastrar. Tente novamente.");
+        console.error(error);
+      }
+    } else {
+      // Login
+      try {
+        const response = await axios.get(`http://localhost:3333/contas/contas/contas`, {
+          params: {
+            email : email,
+            senha: password
+          }
+        });
+
+        if (response.data.length > 0) {
+          alert("Login realizado com sucesso!");
+          console.log("Usuário logado:", response.data[0]);
+        } else {
+          alert("Email ou senha inválidos!");
+        }
+      } catch (error) {
+        alert("Erro ao fazer login. Verifique o servidor.");
+        console.error(error);
+      }
+    }
   };
 
-
   return (
-
-
-
     <div className="container mt-3">
-            <div className="row">
-              <div className="col-11 col-md-6 offset-md-3 text-center mt-5 mb-5">
-                  <h1>Entre para a conversa!</h1>
-                  <form onSubmit={handleSubmit} className="bg-dark p-4 rounded-3 shadow-lg">
-                    <h3 className='text-light'>Login</h3>
-                    <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-labe text-light">Email address</label>
-                        <div className={style.Email}>
-                          <input type="email" onChange={(e) => setUsername(e.target.value)} class="form-control" id="exampleInputEmail1" placeholder='Digite o seu E-mail' aria-describedby="emailHelp" />
-                          <i class="d-flex align-items-center bi bi-person-fill text-light"></i>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                          <label for="exampleInputPassword1" class="form-label text-light">Password</label> 
-                          <div className={style.Email}>
-                            <input type="password" onChange={(e) => setPassword(e.target.value)}  class="form-control" placeholder='Digite a sua senha' id="exampleInputPassword1" />
-                            <i class=" d-flex bi bi-key-fill align-items-center text-light"></i>
-                          </div>                      
-                    </div>
-                    <div class="mb-3 form-check d-inline-flex text-light"> 
-                        <input type="checkbox" class="form-check-input me-1" id="exampleCheck1" />
-                          <label class="form-check-label" for="exampleCheck1">Lembre de mim</label>
-                          <br />
-                      </div>
-                      <br />
-                      <a href="#" className="text-decoration-none">Esqueci minha senha</a>
-                      <hr className='text-light' />
-                      <Botao texto="Entrar" tipo="login" onClick={handleSubmit}/>  
-                        <p className='text-light'>Não tem conta? <NavLink to="/Registro" className="text-decoration-none">Registre-se</NavLink></p>
-                </form>
+      <div className="row">
+        <div className="col-11 col-md-6 offset-md-3 text-center mt-5 mb-5">
+          <h1>Entre para a conversa!</h1>
+          <form onSubmit={handleSubmit} className="bg-dark p-4 rounded-3 shadow-lg">
+            <h3 className="text-light">{isCadastro ? 'Cadastro' : 'Login'}</h3>
+
+            {isCadastro && (
+              <div className="mb-3">
+                <label htmlFor="nome" className="form-label text-light">Nome</label>
+                <div className="d-flex justify-content-center gap-3">
+                  <CampoTexto
+                    type="text"
+                    value={nome}
+                    onChange={(e) => setNome(e.target.value)}
+                    className="form-control"
+                    id="nome"
+                    placeholder="Digite o seu nome"
+                  />
+                  <i className="d-flex align-items-center bi bi-person-fill text-light"></i>
+                </div>
               </div>
-          </div>
+            )}
+
+            <div className="mb-3">
+              <label htmlFor="email" className="form-label text-light">Email</label>
+              <div className="d-flex justify-content-center gap-3">
+                <CampoTexto
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="form-control"
+                  id="email"
+                  placeholder="Digite seu e-mail"
+                />
+                <i className="d-flex align-items-center bi bi-person-fill text-light"></i>
+              </div>
+            </div>
+
+            <div className="mb-3">
+              <label htmlFor="senha" className="form-label text-light">Senha</label>
+              <div className="d-flex justify-content-center gap-3">
+                <CampoTexto
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="form-control"
+                  id="senha"
+                  placeholder="Digite sua senha"
+                />
+                <i className="d-flex align-items-center bi bi-key-fill text-light"></i>
+              </div>
+            </div>
+
+            <div className="mb-3 form-check d-inline-flex text-light">
+              <input type="checkbox" className="form-check-input me-1" id="exampleCheck1" />
+              <label className="form-check-label" htmlFor="exampleCheck1">Lembre de mim</label>
+            </div>
+            <br />
+            <a href="#" className="text-decoration-none">Esqueci minha senha</a>
+            <hr className="text-light" />
+
+            <Botao texto={isCadastro ? "Criar conta" : "Entrar"} tipo="login" />
+
+            <p className="text-light">
+              {isCadastro ? "Já tem conta?" : "Não tem conta?"}{" "}
+              <a href="#" onClick={() => setIsCadastro(!isCadastro)}>
+                {isCadastro ? "Entrar" : "Cadastrar-se"}
+              </a>
+            </p>
+          </form>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export { Login };
