@@ -4,6 +4,7 @@ import { api } from '../services/api';
 export const AppContext = createContext({});
 
 export const AppContextProvider = (props) => {
+    
     const { children } = props;
 
     const [posts, setPosts] = useState([]);
@@ -81,6 +82,7 @@ export const AppContextProvider = (props) => {
             loadingEditar,
             loadingDeletar,
         }}>
+        
             {children}
         </AppContext.Provider>
     )

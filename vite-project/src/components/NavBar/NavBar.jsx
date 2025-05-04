@@ -1,9 +1,12 @@
 import { NavLink } from 'react-router-dom';
-
 import style from './NavBar.module.css';
 
+
 const NavBar = () => {
-    return (
+    console.log(localStorage.getItem("usuario"));
+ return (
+    <div className="container-fluid">
+        <div className="row">
         <div>    
             <nav className={`navbar navbar-expand-lg fixed-top ${style.NavBar}`}>
                 <div class="container-fluid">
@@ -36,30 +39,40 @@ const NavBar = () => {
                             </li>
 
                             <li className="nav-item">
-                            <NavLink to="/Perfil" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
-                                Perfil
-                            </NavLink>
-                                </li>
+                             <NavLink onClick={
+                                () => {
+                                    if(localStorage.getItem("usuario") === null){
+                                        window.location.href = "/Login"
+                                    }
+                                    else{
+                                        window.location.href = "/Perfil"
+                                    }
+                                }
+                             }  className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+                                    Perfil
+                             </NavLink>
+                             </li>
             
                             <div class="form-group has-search d-flex justify-content-center" style={{alignItems: "center"}}>
                                 <span class="fa fa-search form-control-feedback"></span>
                                 <input type="text" class="form-control" placeholder="Search" />
                                 <a className="text-decoration-none text-light fs-2 mx-3 me-5" href="#"><i class="bi bi-search"></i></a>
                             </div>
-
+                        
                             </ul>
 
-                        <div className="d-flex ">
+                        <div className="d-flex gap-3 align-items-center justify-content-center">
+                            <p> {}</p> 
                                 <NavLink to="/Login">
-                                    <span className="text-decoration-none text-light fs-2 me-3"><i class="bi bi-person-circle"></i></span>
+                                     <span className="text-decoration-none text-light fs-2 me-3"><i class="bi bi-person-circle"></i></span>
                                 </NavLink>
                             </div>
 
                         </div>
                 </div>
             </nav>
-        </div>    
-    );
-};
-
-export { NavBar };    
+             </div> 
+         </div>
+        </div> 
+    )};
+export { NavBar }; 

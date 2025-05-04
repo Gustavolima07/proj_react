@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import { Botao, CampoTexto } from '../../components';
+import { MagicMotion } from "react-magic-motion";
 import axios from 'axios';
+import { Usuario } from '../../context/Usuario';
 
 const Login = () => {
+  localStorage.clear();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [nome, setNome] = useState("");
   const [isCadastro, setIsCadastro] = useState(false);
-
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (isCadastro) {
-      // Cadastro
       try {
         await axios.post("http://localhost:3333/contas/contas/contas", {
           nome: nome,
@@ -20,7 +21,7 @@ const Login = () => {
           senha: password
         });
         alert("Conta criada com sucesso!");
-        setIsCadastro(false); // volta para modo login
+        setIsCadastro(false);
         setNome("");
         setEmail("");
         setPassword("");
@@ -29,18 +30,20 @@ const Login = () => {
         console.error(error);
       }
     } else {
-      // Login
       try {
         const response = await axios.get(`http://localhost:3333/contas/contas/contas`, {
           params: {
             email : email,
             senha: password
           }
-        });
+  
+        }); 
+        
 
         if (response.data.length > 0) {
           alert("Login realizado com sucesso!");
-          console.log("Usuário logado:", response.data[0]);
+          localStorage.setItem("usuario", JSON.stringify(response.data[0]));
+          window.location.href = "/Forum";     
         } else {
           alert("Email ou senha inválidos!");
         }
@@ -48,6 +51,7 @@ const Login = () => {
         alert("Erro ao fazer login. Verifique o servidor.");
         console.error(error);
       }
+      
     }
   };
 
@@ -57,6 +61,7 @@ const Login = () => {
         <div className="col-11 col-md-6 offset-md-3 text-center mt-5 mb-5">
           <h1>Entre para a conversa!</h1>
           <form onSubmit={handleSubmit} className="bg-dark p-4 rounded-3 shadow-lg">
+          <MagicMotion>
             <h3 className="text-light">{isCadastro ? 'Cadastro' : 'Login'}</h3>
 
             {isCadastro && (
@@ -70,6 +75,7 @@ const Login = () => {
                     className="form-control"
                     id="nome"
                     placeholder="Digite o seu nome"
+                    required
                   />
                   <i className="d-flex align-items-center bi bi-person-fill text-light"></i>
                 </div>
@@ -113,16 +119,17 @@ const Login = () => {
             <br />
             <a href="#" className="text-decoration-none">Esqueci minha senha</a>
             <hr className="text-light" />
-
-            <Botao texto={isCadastro ? "Criar conta" : "Entrar"} tipo="login" />
-
             <p className="text-light">
               {isCadastro ? "Já tem conta?" : "Não tem conta?"}{" "}
               <a href="#" onClick={() => setIsCadastro(!isCadastro)}>
                 {isCadastro ? "Entrar" : "Cadastrar-se"}
               </a>
             </p>
-          </form>
+
+          </MagicMotion>
+              <Botao texto={isCadastro ? "Criar conta" : "Entrar"} tipo="login" />
+
+            </form>
         </div>
       </div>
     </div>

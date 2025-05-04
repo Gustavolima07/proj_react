@@ -3,5 +3,4 @@ export const TIPO_BOTAO = Object.freeze({
     SUCESSO: 'sucesso',
     ATENCAO: 'atencao',
     VOLTAR: 'voltar',
-    
 })
