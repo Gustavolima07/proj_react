@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useAppContext } from "../../hooks";
+import { isLogado } from '../../context/Usuario';
 
 import { Botao, CampoTexto, Loading } from "../../components";
 
@@ -21,16 +22,23 @@ const CriarPost = () => {
     const submetForm = (event) => {
         event.preventDefault();
 
-        if (!nomePost, !descricaoPost) {
-            alert('Preencha todos os campos!');
-            return;
+        if (!isLogado()) {
+            window.location.href = "/Login";
+        
         }
-
-        adicionarPost(nomePost, descricaoPost);
-        setNomePost('');
-        setDescricaoPost('');
+        else {
+            
+            
+            if (!nomePost, !descricaoPost) {
+                alert('Preencha todos os campos!');
+            }
+            
+            adicionarPost(nomePost, descricaoPost);
+            setNomePost('');
+            setDescricaoPost('');
+        }
     }
-
+        
 
 
 

@@ -1,4 +1,5 @@
 import { Botao, CampoTexto, Loading } from "../../../components";
+import { isLogado } from "../../../context/Usuario";
 import { useState } from "react";
 import { useAppContext } from "../../../hooks/";
 
@@ -19,7 +20,7 @@ const ListaPostsItems = (props) => {
         blurTimeout = setTimeout(() => {
             editarPost(id, nomeEditado, descricaoEditada);
             setEstaEditando(false);
-        }, 100); // pequeno atraso para permitir foco no outro campo
+        }, 100); 
     };
 
     const cancelBlur = () => {
@@ -51,7 +52,13 @@ const ListaPostsItems = (props) => {
             <Botao
                 texto={loadingEstaDeletando ? <Loading /> : 'X'}
                 tipo="atencao"
-                onClick={() => removerPost(id)}
+                onClick={() => {
+                    if (!isLogado()) {
+                        window.location.href = "/Login";
+                    } else {
+                        removerPost(id);
+                    }
+                }}
             />
         </div>
     );

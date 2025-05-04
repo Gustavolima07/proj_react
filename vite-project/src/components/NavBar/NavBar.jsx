@@ -1,9 +1,15 @@
 import { NavLink } from 'react-router-dom';
+import { isLogado, Usuario,getUsarioLogado } from '../../context/Usuario';
 import style from './NavBar.module.css';
 
 
 const NavBar = () => {
-    console.log(localStorage.getItem("usuario"));
+    if(isLogado()){
+        const data=JSON.parse(localStorage.getItem("usuario"));
+        const usuario = new Usuario(
+            data.nome, data.senha, data.email, data.id,true
+        );
+    }
  return (
     <div className="container-fluid">
         <div className="row">
@@ -39,16 +45,14 @@ const NavBar = () => {
                             </li>
 
                             <li className="nav-item">
-                             <NavLink onClick={
+                             <NavLink  className={({ isActive }) => `nav-link ${isActive ? 'active' : 'text-light'}`} onClick={
                                 () => {
-                                    if(localStorage.getItem("usuario") === null){
-                                        window.location.href = "/Login"
-                                    }
-                                    else{
-                                        window.location.href = "/Perfil"
-                                    }
+                                    if(!isLogado())
+                                        window.location.href = "/Login";
+                                    else
+                                        window.location.href = "/Perfil";
                                 }
-                             }  className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+                             } >
                                     Perfil
                              </NavLink>
                              </li>
@@ -62,17 +66,18 @@ const NavBar = () => {
                             </ul>
 
                         <div className="d-flex gap-3 align-items-center justify-content-center">
-                            <p> {}</p> 
+                            <p name="navNome">getUsa{getUsarioLogado()}</p> 
                                 <NavLink to="/Login">
                                      <span className="text-decoration-none text-light fs-2 me-3"><i class="bi bi-person-circle"></i></span>
                                 </NavLink>
-                            </div>
 
                         </div>
+                    </div>
+                    </div>
+                     </nav>
                 </div>
-            </nav>
              </div> 
          </div>
-        </div> 
     )};
+
 export { NavBar }; 

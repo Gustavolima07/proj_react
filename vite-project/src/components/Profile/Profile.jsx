@@ -6,7 +6,7 @@ import { Usuario } from '../../context/Usuario';
 function Profile() {
    const data =JSON.parse((localStorage.getItem("usuario")));
     const usuario = new Usuario(data.nome, data.email, data.senha, data.telefone, data.cpf, data.dataNascimento, data.endereco, data.cidade, data.estado, data.pais, data.cep, data.imagem);
-  const [user, setUser] = useState({
+    const [user, setUser] = useState({
     name: usuario.nome ,
     email: usuario.email ,
     bio: 'Desenvolvedor apaixonado por tecnologia e café.',

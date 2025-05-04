@@ -4,9 +4,8 @@ import { api } from '../services/api';
 export const AppContext = createContext({});
 
 export const AppContextProvider = (props) => {
-    
     const { children } = props;
-
+    
     const [posts, setPosts] = useState([]);
 
     const [loadingCarregar, setLoandingCarregar] = useState(false);
