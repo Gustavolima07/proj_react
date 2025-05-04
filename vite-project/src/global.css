@@ -11,7 +11,6 @@
     box-sizing: border-box;
     }
     
-    
     body{
     background-color: #181C1Fff;
     }
@@ -43,5 +42,6 @@
   margin-top: auto; 
 }
 
-
-      
+.forum-container {
+  margin-top: var(--navbar-height, 80px);
+}

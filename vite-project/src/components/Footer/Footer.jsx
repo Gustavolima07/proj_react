@@ -7,8 +7,8 @@ const Footer = () => {
       <div className="container-fluid px-4">
         <div className="row">
           <div className="col-6 col-lg-4">
-            <h3 className="pt-3 fw-bold">TeachSphere</h3>
-            <p>Um fórum colaborativo para amantes de tecnologia</p>
+            <h3 className="pt-3 fw-bold">TechSphere</h3>
+            <p>Um fórum colaborativo para desenvolvedores!</p>
             <p>
               <a className="link-opacity-100 text-decoration-none" target="_blank" href="mailto:contato@techsphere.com">
                 ✉️Email: contato@techsphere.com

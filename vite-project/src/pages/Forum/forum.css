@@ -1,0 +1,164 @@
+.forum-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .projects-section {
+    flex: 1;
+    background: #181C1Fff;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .topic-card {
+    background: #000080;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .topic-card button {
+    background-color: #48007e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  
+  .topic-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .details-section {
+    position: relative;
+    flex: 2;
+    background: #282c34;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .details-section button {
+    margin: 10px 5px;
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+
+  .details-section input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .details-section h3 {
+    margin-top: 20px;
+  }
+  
+  .details-section .comments-container {
+    margin-top: 10px;
+  }
+
+  .comment-section {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 10px; 
+  }
+  
+  .comment-section input {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .comment-section button {
+    background-color: #48007e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+
+  button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    background: #48007e;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+
+  .details-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  
+  .details-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  .details-header .description {
+    font-size: 1em;
+    color: #f7eded;
+  }
+  
+  .details-header .author {
+    font-size: 0.9em;
+    color: #ebe5e5;
+    margin-top: 5px;
+  }
+  
+  .author-name {
+    color: #ebe5e5;
+  }
+
+  .download-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #48007e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }  
+
+  pre {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    overflow-y: auto;
+    font-family: monospace;
+  }
+  
+  code {
+    font-size: 15px;
+  }
+  
+  input[type="text"] {
+    color: #000;
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
