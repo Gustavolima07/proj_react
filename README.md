@@ -8,6 +8,7 @@ Este é um breve resumo do projeto.
 Siga os passos abaixo para instalar o projeto em sua máquina:
 
 1. Abra o Visual Studio Code.
+
 2. Clone o repositório:
    ```bash
    git clone https://github.com/Gustavolima07/proj_react
