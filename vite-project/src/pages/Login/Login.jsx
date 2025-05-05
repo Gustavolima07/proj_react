@@ -35,17 +35,17 @@ const Login = () => {
       try {
         const response = await axios.get(`http://localhost:3333/contas/contas/contas`, {
           params: {
-            email : email,
+            email: email,
             senha: password
           }
   
-        }); 
-    
+        });
 
         if (response.data.length > 0) {
           alert("Login realizado com sucesso!");
           localStorage.setItem("usuario", JSON.stringify(response.data[0]));
-            navigate("/Forum");
+          navigate("/Forum");
+          navigate(0);
         } else {
           alert("Email ou senha inválidos!");
         }

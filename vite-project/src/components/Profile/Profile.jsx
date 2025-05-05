@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import './Profile.css';
 import { Usuario } from '../../context/Usuario';
 import { Botao } from '../Botao';
@@ -7,7 +7,8 @@ import { Botao } from '../Botao';
 
 function Profile() {
    const data =JSON.parse((localStorage.getItem("usuario")));
-    const usuario = new Usuario(data.nome, data.email, data.senha, data.telefone, data.cpf, data.dataNascimento, data.endereco, data.cidade, data.estado, data.pais, data.cep, data.imagem);
+  const usuario = new Usuario(data.nome, data.email, data.senha, data.telefone, data.cpf, data.dataNascimento, data.endereco, data.cidade, data.estado, data.pais, data.cep, data.imagem);
+    const navigate = useNavigate();
     const [user, setUser] = useState({
     name: usuario.nome ,
     email: usuario.email ,
@@ -47,6 +48,8 @@ function Profile() {
   const handleLogout = () => {
     const nullUser = new Usuario(null, null, null, null, null, null, null, null, null, null, null, null);
     localStorage.setItem("usuario", JSON.stringify(nullUser));
+    navigate('/Login');
+    navigate(0);
     setUser({
       name: null,
       email: null,

@@ -9,6 +9,7 @@ const NavBar = () => {
         const usuario = new Usuario(
             data.nome, data.senha, data.email, data.id,true
         );
+    
     }
  return (
     <div className="container-fluid">
@@ -46,8 +47,8 @@ const NavBar = () => {
                         
                             </ul>
 
-                        <div className="d-flex gap-3 align-items-center justify-content-center">
-                            <p name="navNome">{getUsarioLogado()}</p> 
+                        <div className="d-flex gap-3 align-items-center justify-content-center text-align-center">
+                            <p style={{display: "contents"}} name="navNome">{getUsarioLogado()}</p> 
                             <NavLink to={getUsarioLogado() ? "/Perfil" : "/Login"} className="text-decoration-none text-light fs-2">
                                 <i class="bi bi-person-circle"></i>
                             </NavLink>
