@@ -48,8 +48,7 @@ function Profile() {
   const handleLogout = () => {
     const nullUser = new Usuario(null, null, null, null, null, null, null, null, null, null, null, null);
     localStorage.setItem("usuario", JSON.stringify(nullUser));
-    navigate('/Login');
-    navigate(0);
+   window.location.href = "/Login";
     setUser({
       name: null,
       email: null,

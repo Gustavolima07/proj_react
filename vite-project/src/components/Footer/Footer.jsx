@@ -3,7 +3,7 @@ import './Footer.module.css';
 
 const Footer = () => {
   return (
-    <footer style={{ position: "relative", bottom: 0, left: 0, width: "100%", zIndex: 2 }}>
+    <footer style={{ position: "relative", bottom: 0, left: 0, width: "100%", zIndex: 2, backgroundColor: "#212529", color: "#fff" }} className="text-light mt-5">
       <div className="container-fluid px-4">
         <div className="row">
           <div className="col-6 col-lg-4">

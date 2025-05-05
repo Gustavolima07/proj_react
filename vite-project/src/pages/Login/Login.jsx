@@ -3,7 +3,6 @@ import { Botao, CampoTexto } from '../../components';
 import { MagicMotion } from "react-magic-motion";
 import axios from 'axios';
 import { Usuario } from '../../context/Usuario';
-import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   localStorage.clear();
@@ -11,7 +10,6 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [nome, setNome] = useState("");
   const [isCadastro, setIsCadastro] = useState(false);
-  const navigate = useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -44,8 +42,7 @@ const Login = () => {
         if (response.data.length > 0) {
           alert("Login realizado com sucesso!");
           localStorage.setItem("usuario", JSON.stringify(response.data[0]));
-          navigate('/Forum');
-          navigate(0);
+          window.location.href = "/Forum";
         } else {
           alert("Email ou senha inválidos!");
         }
@@ -128,7 +125,8 @@ const Login = () => {
               </a>
             </p>
 
-          </MagicMotion>
+            </MagicMotion>
+            
               <Botao texto={isCadastro ? "Criar conta" : "Entrar"} tipo="login" />
 
             </form>
