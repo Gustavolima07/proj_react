@@ -1,4 +1,5 @@
 # TechSphere
+#### Desenvolvedores: Luis Gustavo Lima, Matheus Soares Valério e Mirella Mugnato
 
 Este é um breve resumo do projeto.
 
