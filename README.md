@@ -2,8 +2,6 @@
 
 Este é um breve resumo do projeto. Descreva aqui o propósito principal, os objetivos e a motivação para sua criação.
 
-Para abrir e visualizar o projeto em sua máquina siga os seguintes passos:
-
 ### Instalação
 
 Siga os passos abaixo para instalar o projeto em sua máquina:
