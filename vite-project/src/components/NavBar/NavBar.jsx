@@ -16,7 +16,7 @@ const NavBar = () => {
         <div>    
             <nav className={`navbar navbar-expand-lg fixed-top ${style.NavBar}`}>
                 <div class="container-fluid">
-                        <NavLink to="/" className="navbar-brand">
+                        <NavLink to={isLogado() ? "/Dashboard" : "/"} className="navbar-brand">
                             <span className="text-light">TechSphere <i class="bi bi-chat-dots"></i></span>
                         </NavLink>
                         <button class="navbar-toggler mx-4 border-secondary" type="button" data-bs-toggle="collapse" 
@@ -55,17 +55,9 @@ const NavBar = () => {
 
                         <div className="d-flex gap-3 align-items-center justify-content-center">
                             <p name="navNome">{getUsarioLogado()}</p> 
-                                <NavLink onClick={
-                                () => {
-                                    if(!isLogado())
-                                        window.location.href = "/Login";
-                                    else
-                                        window.location.href = "/Perfil";
-                                }
-                             } >
-                                     <span className="text-decoration-none text-light fs-2 me-3"><i class="bi bi-person-circle"></i></span>
-                                </NavLink>
-
+                            <NavLink to={isLogado() ? "/Perfil" : "/Login"} className="text-decoration-none text-light fs-2">
+                                <i class="bi bi-person-circle"></i>
+                            </NavLink>
                         </div>
                     </div>
                     </div>

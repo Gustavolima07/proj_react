@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Profile.css';
 import { Usuario } from '../../context/Usuario';
+import { Botao } from '../Botao';
 
 
 function Profile() {
@@ -78,7 +79,8 @@ function Profile() {
           )}
           <button className="edit-button" onClick={() => setIsEditing(true)}>
           Editar Perfil
-          </button>
+              </button>
+          <Botao texto="Sair" tipo="atencao"></Botao>
           </div>
         </>
       )}
