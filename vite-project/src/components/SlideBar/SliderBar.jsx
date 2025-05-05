@@ -1,4 +1,6 @@
 import { useState } from "react";
+
+import { NavLink } from "react-router-dom";
 import styles from "../SlideBar/SlideBar.module.css";
 
 const SlideBar = () => {
@@ -20,51 +22,15 @@ const SlideBar = () => {
                         <span className="description">Página inicial</span>
                     </a>
 
-                    <a href="#" className="nav-link active">
+                    <NavLink to="/Forum" className="nav-link">
                         <span className="icon"><i className="bi bi-arrow-up-right-circle"></i></span>
-                        <span className="description">Popular</span>
-                    </a>
+                        <span className="description">Conversas</span>
+                    </NavLink>
 
-                    <a href="#" className="nav-link">
-                        <span className="icon"><i className="bi bi-bell"></i></span>
+                    <NavLink to="/Login" className="nav-link">
+                        <span className="icon"><i className="bi bi-arrow-up-right-circle"></i></span>
                         <span className="description">Notificações</span>
-                    </a>
-
-                    <a
-                        href="#"
-                        className="nav-link"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#sub-menu"
-                        aria-expanded="false"
-                        aria-controls="sub-menu"
-                    >
-                        <span className="icon"><i className="bi bi-people"></i></span>
-                        <span className="description">Grupos <i className="bi bi-caret-down"></i></span>
-                    </a>
-
-                    <hr />
-
-                    <div className="sub-menu collapse" id="sub-menu">
-                        <a href="#" className="nav-link">
-                            <span className="icon"><i className="bi bi-browser-chrome"></i></span>
-                            <span className="description">Desenvolvimento Web</span>
-                        </a>
-
-                        <a href="#" className="nav-link">
-                            <span className="icon"><i className="bi bi-robot"></i></span>
-                            <span className="description">IA</span>
-                        </a>
-
-                        <a href="#" className="nav-link">
-                            <span className="icon"><i className="bi bi-bricks"></i></span>
-                            <span className="description">Segurança da Informação</span>
-                        </a>
-
-                        <a href="#" className="nav-link">
-                            <span className="icon"><i className="bi bi-person-workspace"></i></span>
-                            <span className="description">Dicas de carreira</span>
-                        </a>
-                    </div>
+                    </NavLink>
                 </nav>
             </div>
         </aside>

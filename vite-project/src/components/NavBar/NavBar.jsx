@@ -15,7 +15,7 @@ const NavBar = () => {
         <div className="row">
         <div>    
             <nav className={`navbar navbar-expand-lg fixed-top ${style.NavBar}`}>
-                <div class="container-fluid">
+                <div class="container-fluid d-flex justify-content-between gap-3 align-items-center"> 
                         <NavLink to={isLogado() ? "/Dashboard" : "/"} className="navbar-brand">
                             <span className="text-light">TechSphere <i class="bi bi-chat-dots"></i></span>
                         </NavLink>
@@ -43,13 +43,6 @@ const NavBar = () => {
                                     Sobre nós        
                                 </NavLink>
                             </li>
-
-            
-                            <div class="form-group has-search d-flex justify-content-center" style={{alignItems: "center"}}>
-                                <span class="fa fa-search form-control-feedback"></span>
-                                <input type="text" class="form-control" placeholder="Search" />
-                                <a className="text-decoration-none text-light fs-2 mx-3 me-5" href="#"><i class="bi bi-search"></i></a>
-                            </div>
                         
                             </ul>
 

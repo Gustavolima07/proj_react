@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import './Profile.css';
 import { Usuario } from '../../context/Usuario';
 import { Botao } from '../Botao';
@@ -43,6 +44,18 @@ function Profile() {
     }
   };
 
+  const handleLogout = () => {
+    const nullUser = new Usuario(null, null, null, null, null, null, null, null, null, null, null, null);
+    localStorage.setItem("usuario", JSON.stringify(nullUser));
+    setUser({
+      name: null,
+      email: null,
+      bio: null,
+      avatar: null,
+      isProfessional: false,
+    });
+  };
+
   return (
     <div className="profile-container">
       <img src={newAvatar || user.avatar} alt="Avatar" className="profile-avatar" />
@@ -62,9 +75,8 @@ function Profile() {
             Conta para Empresas
           </label>
           <button style={{ borderRadius: '10px' }} onClick={handleSave}>
-          Salvar
+            Salvar
           </button>
-
         </>
       ) : (
         <>
@@ -72,15 +84,18 @@ function Profile() {
           <p>{user.email}</p>
           <p>{user.bio}</p>
           <div className="header-actions">
-          {user.isProfessional && (
-          <span className={`professional-badge ${user.isProfessional ? 'fundo-azul' : ''}`}>
-          Empresa
-          </span>
-          )}
-          <button className="edit-button" onClick={() => setIsEditing(true)}>
-          Editar Perfil
+            {user.isProfessional && (
+              <span className={`professional-badge ${user.isProfessional ? 'fundo-azul' : ''}`}>
+                Empresa
+              </span>
+            )}
+            <button className="edit-button" onClick={() => setIsEditing(true)}>
+              Editar Perfil
               </button>
-          <Botao texto="Sair" tipo="atencao"></Botao>
+            <NavLink to="/Login" className="text-decoration-none text-light fs-2">  
+                <Botao texto="Sair" tipo="atencao" onClick={handleLogout}></Botao>
+      
+            </NavLink>
           </div>
         </>
       )}
