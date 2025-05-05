@@ -3,7 +3,6 @@ import { Botao, CampoTexto } from '../../components';
 import { MagicMotion } from "react-magic-motion";
 import axios from 'axios';
 import { Usuario } from '../../context/Usuario';
-import { NavLink } from 'react-router-dom';
 
 const Login = () => {
   localStorage.clear();
@@ -44,7 +43,7 @@ const Login = () => {
         if (response.data.length > 0) {
           alert("Login realizado com sucesso!");
           localStorage.setItem("usuario", JSON.stringify(response.data[0]));
-          NavLink("/Dashboard");     
+          window.location.href = "/Forum";     
         } else {
           alert("Email ou senha inválidos!");
         }
