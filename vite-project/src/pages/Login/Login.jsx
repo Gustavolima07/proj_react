@@ -15,7 +15,7 @@ const Login = () => {
 
     if (isCadastro) {
       try {
-        await axios.post("https://hackteen-techsphere-proj.onrender.com/Login", {
+        await axios.post("https://hackteen-techsphere-proj.onrender.com/", {
           nome: nome,
           email: email,
           senha: password
