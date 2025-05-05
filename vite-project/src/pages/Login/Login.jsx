@@ -15,7 +15,7 @@ const Login = () => {
 
     if (isCadastro) {
       try {
-        await axios.post("https://hackteen-techsphere-proj.onrender.com/", {
+        await axios.post("https://hackteen-techsphere-proj.onrender.com", {
           nome: nome,
           email: email,
           senha: password
@@ -31,7 +31,7 @@ const Login = () => {
       }
     } else {
       try {
-        const response = await axios.get(`http://localhost:3333/contas/contas/contas`, {
+        const response = await axios.get(`https://hackteen-techsphere-proj.onrender.com`, {
           params: {
             email: email,
             senha: password
