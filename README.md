@@ -21,9 +21,8 @@ Siga os passos abaixo para instalar o projeto em sua máquina:
    ```bash
    npm run dev 
 
+## Documentação do Projeto
 
-## Documentação do projeto
-
-- [[Link 1](https://teachsphere-proj.vercel.app/) - Deploy do Projeto](#)
-- [[Link 2](https://drive.google.com/file/d/1PTN51MJEoMy-ryoZfIM8pWpq2adOFXVX/view?usp=drive_link) - Proposta da Startup](#)
-- [[Link 3](https://photos.app.goo.gl/bUTphKED9Wf5GwVs7) - Video de Apresentação da Proposta](#)
+- [[Link 1](https://teachsphere-proj.vercel.app/) - Deploy do Projeto]
+- [[Link 2](https://drive.google.com/file/d/1PTN51MJEoMy-ryoZfIM8pWpq2adOFXVX/view?usp=drive_link) - Proposta da Startup]
+- [[Link 3](https://photos.app.goo.gl/bUTphKED9Wf5GwVs7) - Video de Apresentação da Proposta]
