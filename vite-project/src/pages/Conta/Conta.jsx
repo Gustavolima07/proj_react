@@ -1,13 +1,8 @@
 import React from 'react';
 import { Cards } from '../../components/Cards';
-import { Profile } from '../../components/Profile';
-import { Form } from '../../components/Form'; 
+import { Profile } from '../../components/Profile'; 
 
 const Perfil = () => {
-
-  const handleArquivoEnviado = (data) => {
-    console.log('Arquivo enviado com sucesso:', data);
-  };
 
   return (
     <div className="container mt-3">
@@ -33,14 +28,6 @@ const Perfil = () => {
         </div>
         <div className="row align-items-start">
           <Cards title="Projeto_Aulas" descricao="Aulas"/>
-        </div>
-      </div>
-      <div className="row justify-content-center mb-5">
-        <div className="col-12 col-md-8">
-          <br />
-          <h2>Criar Post</h2>
-          <br />
-          <Form onArquivoEnviado={handleArquivoEnviado} />
         </div>
       </div>
     </div>
