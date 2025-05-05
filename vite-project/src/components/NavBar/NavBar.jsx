@@ -55,7 +55,7 @@ const NavBar = () => {
 
                         <div className="d-flex gap-3 align-items-center justify-content-center">
                             <p name="navNome">{getUsarioLogado()}</p> 
-                            <NavLink to={isLogado() ? "/Perfil" : "/Login"} className="text-decoration-none text-light fs-2">
+                            <NavLink to={getUsarioLogado() ? "/Perfil" : "/Login"} className="text-decoration-none text-light fs-2">
                                 <i class="bi bi-person-circle"></i>
                             </NavLink>
                         </div>
