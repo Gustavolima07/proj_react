@@ -1,5 +1,5 @@
 # TechSphere
-#### Desenvolvedores: Luis Gustavo Lima, Matheus Soares Valério e Mirella Mugnato
+#### Desenvolvedores: Luis Gustavo Lima, Matheus Soares Valério e Mirella Mugnato.
 
 Este é um breve resumo do projeto.
 
@@ -7,16 +7,17 @@ Este é um breve resumo do projeto.
 
 Siga os passos abaixo para instalar o projeto em sua máquina:
 
-1. Clone o repositório:
+1. Abra o Visual Studio Code.
+2. Clone o repositório:
    ```bash
    git clone https://github.com/Gustavolima07/proj_react
-2. Abra o terminal e acesse a pasta do projeto:
+3. Abra o terminal e acesse a pasta do projeto:
    ```bash
    cd vite-project
-3. Instale as dependências:
+4. Instale as dependências:
    ```bash
    npm install
-4. Execute o projeto e acesse o local host:
+5. Execute o projeto e acesse o local host:
    ```bash
    npm run dev 
 
