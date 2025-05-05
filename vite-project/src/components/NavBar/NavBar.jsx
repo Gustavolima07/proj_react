@@ -16,7 +16,7 @@ const NavBar = () => {
         <div>    
             <nav className={`navbar navbar-expand-lg fixed-top ${style.NavBar}`}>
                 <div class="container-fluid d-flex justify-content-between gap-3 align-items-center"> 
-                        <NavLink to={isLogado() ? "/Dashboard" : "/"} className="navbar-brand">
+                        <NavLink to={isLogado() ? "/" : "/"} className="navbar-brand">
                             <span className="text-light">TechSphere <i class="bi bi-chat-dots"></i></span>
                         </NavLink>
                         <button class="navbar-toggler mx-4 border-secondary" type="button" data-bs-toggle="collapse" 
