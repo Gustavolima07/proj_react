@@ -44,7 +44,7 @@ const Login = () => {
         if (response.data.length > 0) {
           alert("Login realizado com sucesso!");
           localStorage.setItem("usuario", JSON.stringify(response.data[0]));
-          navigate("/Forum");
+          navigate('/Forum');
           navigate(0);
         } else {
           alert("Email ou senha inválidos!");
