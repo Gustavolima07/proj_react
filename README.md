@@ -11,7 +11,7 @@ Siga os passos abaixo para instalar o projeto em sua máquina:
 1. Clone o repositório:
    ```bash
    git clone https://github.com/Gustavolima07/proj_react
-2. Abra o Terminal e acesse a pasta do projeto:
+2. Abra o terminal e acesse a pasta do projeto:
    ```bash
    cd seu-projeto
 3. Instale as dependências:
