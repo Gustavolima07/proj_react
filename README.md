@@ -1,7 +1,7 @@
 # TechSphere
 #### Desenvolvedores: Luis Gustavo Lima, Matheus Soares Valério e Mirella Mugnato.
 
-Este é um breve resumo do projeto.
+No projeto, optamos por utilizar React com Vite e JavaScript, visando agilidade no desenvolvimento e melhor desempenho na construção da interface. O React permitiu a criação de componentes reutilizáveis, enquanto o Vite proporcionou um ambiente rápido e eficiente. Isso garantiu uma aplicação fluida e moderna.
 
 ### Instalação
 
