@@ -1,6 +1,6 @@
 # TechSphere
 
-Este é um breve resumo do projeto. Descreva aqui o propósito principal, os objetivos e a motivação para sua criação.
+Este é um breve resumo do projeto.
 
 ### Instalação
 
@@ -11,7 +11,7 @@ Siga os passos abaixo para instalar o projeto em sua máquina:
    git clone https://github.com/Gustavolima07/proj_react
 2. Abra o terminal e acesse a pasta do projeto:
    ```bash
-   cd seu-projeto
+   cd vite-project
 3. Instale as dependências:
    ```bash
    npm install
